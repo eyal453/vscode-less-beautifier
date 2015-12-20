@@ -1,0 +1,34 @@
+{
+    "name": "VscBeautifyLess",
+    "displayName": "VscBeautifyLess",
+    "description": "Beautify LESS",
+    "version": "0.0.1",
+    "publisher": "eyal",
+    "engines": {
+        "vscode": "^0.10.1"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.beautifyLess"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.beautifyLess",
+                "title": "Beautify LESS"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+        "compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+    },
+    "devDependencies": {
+        "js-beautify": "^1.5.10",
+        "typescript": "^1.6.2",
+        "vscode": "0.10.x"
+    }
+}
